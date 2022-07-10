@@ -1,0 +1,182 @@
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-variant-caps: titling-caps;
+        }
+        
+        .App {
+            width: 100%;
+            margin: auto;
+            height: 100vh;
+            /*background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.qrtfdU3GdKh3U-wl_O1EpwHaE_%26pid%3DApi&f=1');*/
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            /*animation: bgcolorchange normal infinite 10s;*/
+        }
+        
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            position: relative;
+        }
+        
+        .Nav {
+            /*text-align: center;*/
+            display: flex;
+            justify-content: space-around;
+            align-items: baseline;
+            padding: 15px;
+            color: white;
+            line-height: 10px;
+            font-size: x-large;
+            font-weight: 900;
+            background: black;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            position: sticky;
+        }
+        
+        .Nav img {
+            max-width: 200px;
+        }
+        
+        .Ul {
+            list-style: none;
+        }
+        
+        .Ul li {
+            padding: 10px;
+            display: inline-block;
+            font-variant: small-caps;
+        }
+        
+        .Body {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            transform: translate(50%, 50%);
+        }
+        
+        .dContanier {
+            /*display: flex;*/
+            height: 300px;
+            width: 300px;
+            margin-left: 10px;
+        }
+        
+        .dContanier img {
+            background-image: linear-gradient(white, #eee);
+            width: 300px;
+            height: 200px;
+            border: 1px solid;
+        }
+        
+        .dContanier p {
+            width: 300px;
+            /*height: 100px;*/
+            text-align: center;
+            line-height: 1em;
+            color: white;
+            background-color: black;
+            padding: 5px;
+        }
+        
+        .DContanier {
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: 1fr;
+            width: 100%;
+            padding: 15px;
+        }
+        
+        .DContanier img,
+        .DContanier button {
+            width: 300px;
+            height: inherit;
+        }
+        
+        .Section-one {
+            display: flex;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            gap: 2em;
+            margin: 40px auto;
+        }
+        
+        .Section-one button {
+            color: white;
+            padding: 1em;
+            background-color: black;
+            border-radius: 15em;
+        }
+        
+        .Section-two {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            width: 80%;
+            margin: auto;
+            height: 100vh;
+            background-image: url('https://clinika.modeltheme.com/wp-content/uploads/2020/09/Clinika-Title_benefit.png') linear-gradient(#eee, white);
+        }
+        
+        .Bc {
+            width: auto;
+            height: auto;
+            border-radius: 50%;
+            position: relative;
+            background-image: url('https://clinika.modeltheme.com/wp-content/uploads/2020/09/Clinika-bebeftis-image-1-768x801.png');
+        }
+        
+        .Sc {
+            position: absolute;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            background-image: url('https://clinika.modeltheme.com/wp-content/uploads/2020/09/Clinika-bebeftis-image-1-768x801.png');
+        }
+        
+        .Doctors {
+            border: black 1px solid;
+            display: grid;
+            grid-template-columns: 1fr 5fr 1fr;
+            gap: 1em;
+            width: 80%;
+            margin: 20px auto;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .Doctors img {
+            max-width: 200px;
+        }
+        
+        .Doctors button {
+            height: 80%;
+            width: 200px;
+            color: white;
+            background-color: black;
+            opacity: 0.8;
+        }
+        /*        
+        .Doctors .txt {
+            text-align: center;
+        }*/
+        
+        @keyframes bgcolorchange {
+            0% {
+                background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.qrtfdU3GdKh3U-wl_O1EpwHaE_%26pid%3DApi&f=1');
+            }
+            50% {
+                background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.XQO8JjENykLWoYPLmL1C6wHaDd%26pid%3DApi&f=1');
+            }
+            100% {
+                background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.F4iIZ05d-SDUlxxTNaOJEAHaEK%26pid%3DApi&f=1');
+            }
+        }
