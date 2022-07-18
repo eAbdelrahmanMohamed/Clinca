@@ -1,13 +1,36 @@
 import React, { useState, useEffect } from "react"
 //import Treatments from "./Treatments"
+import { Turn, CData } from "./clients";
+export default function Form(props) {
+    //var [CData, setdata] = useState();
+    var [turn, setTurn] = useState(Turn)
+    var [Pataint, setPataint] = useState({ name: "", age: 0, phone: "", Address: "", blood_type: "", History: false, NIL: Turn });
+    var [Class, setClass] = useState("show");
+    //useEffect(
+    //    () => {
+    //        setTurn((turn) => turn++)
 
-export default function Form() {
-    var [CData, setdata] = useState([{ name: "patiant 1", age: 60, phone: "01026712003", Address: "cairo, Egypt", blood_type: "B+", Case: "dyapities", treatments: "test" }]);
-    var [Pataint, setPataint] = useState({ name: "", age: 0, phone: "", Address: "", blood_type: "" });
+    //    }, [turn])
+
+    localStorage.setItem("pataints", JSON.stringify(CData))
     return ( <
-        div className = "FContanier" >
+        div >
         <
-        form >
+        button type = "button"
+        onClick = {
+            () => setClass((Class) => Class === "show" ? "hide" : "show")
+        } >
+        show < /button>
+
+        <
+        div className = { Class === "show" ? "hide" : "show" } >
+        <
+        button type = "button"
+        onClick = {
+            () => setClass((Class) => Class === "show" ? "hide" : "show")
+        }
+        id = "Close" > X < /button> <
+        form className = "Form" >
         <
         label > Name < /label> <
         input type = "text"
@@ -18,11 +41,10 @@ export default function Form() {
                 //console.log(Pataint)
             }
         }
-        /> <
-        h1 > { Pataint.name } < /h1>
+        /> 
 
         <
-        label > Age < /label> <
+        label > Age < /label>  <
         input type = "nubmer"
 
         onChange = {
@@ -32,16 +54,81 @@ export default function Form() {
             }
         }
         /> <
-        h1 > { Pataint.age } < /h1> <
+        label > Phone < /label>  <
+        input type = "nubmer"
+
+        onChange = {
+            (e) => {
+                setPataint(Pataint, Pataint.phone = e.target.value);
+                //console.log(Pataint)
+            }
+        }
+        /> <
+        label > Address < /label>  <
+        input type = "nubmer"
+
+        onChange = {
+            (e) => {
+                setPataint(Pataint, Pataint.Address = e.target.value);
+                //console.log(Pataint)
+            }
+        }
+        />
+
+        <
+        label > Bloode type < /label>  <
+        input type = "text"
+
+        onChange = {
+            (e) => {
+                setPataint(Pataint, Pataint.blood_type = e.target.value);
+                //console.log(Pataint)
+            }
+        }
+        /> 
+
+        <
+        label > have an experiance with us < /label>  <
+        div >
+
+        <
+        label > yes < /label>  <
+        input type = "radio"
+        name = "history"
+        onChange = {
+            (e) => {
+                setPataint(Pataint, Pataint.History = true);
+                //console.log(Pataint)
+            }
+        }
+        />  <
+        label > No < /label>  <
+        input type = "radio"
+        name = "history"
+        onChange = {
+            (e) => {
+                setPataint(Pataint, Pataint.History = false);
+                //console.log(Pataint)
+            }
+        }
+        />   < /
+        div > <
         button type = "button"
         onClick = {
             () => {
+                setTurn((turn) => turn++)
+                Pataint.NIL = turn;
                 CData.push(Pataint);
-                console.log(CData)
+                localStorage.setItem("pataints", JSON.stringify(CData))
+                    //Turn++;
+                window.location.href = "/Ali"
+                console.log(CData, Turn)
             }
-        } > push < /button> < /
+        } > Reserve < /button> < /
         form > <
-        /div>
+        /div> < /
+        div >
+
 
     )
 

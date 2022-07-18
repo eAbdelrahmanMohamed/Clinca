@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import departments from './Departments';
 import { initializeApp } from "firebase/app";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Ophthalmology from './Ophthalmology';
+import Dpage from './Dpage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Home() {
@@ -80,13 +80,13 @@ export default function Home() {
         img src = 'https://clinika.modeltheme.com/wp-content/uploads/2020/09/Clinka-service-1.png' / >
         <
         h3 > All medical facility < /h3> <
-        p > Entreaties unpleasant sufficient few pianoforte discovered. < /p> <
-        /div> <
+        p > Entreaties unpleasant sufficient few pianoforte discovered. < /p> < /
+        div > <
         /div> <
         div className = 'Bc' >
         <
-        div className = 'Sc' > < /div> <
-        /div> <
+        div className = 'Sc' > < /div> < /
+        div > <
         /div>
 
         {
@@ -101,7 +101,7 @@ export default function Home() {
                     key = { e.name }
                     onClick = {
                         () => {
-                            window.location.href = "/Ophthalmology"
+                            window.location.href = "/Dpage"
                         }
                     } >
 

@@ -143,31 +143,119 @@
         }
         
         .Doctors {
-            border: black 1px solid;
-            display: grid;
-            grid-template-columns: 1fr 5fr 1fr;
+            /*border: black 1px solid;*/
+            /*display: grid;
+            grid-template-columns: 1fr 5fr 1fr;*/
+            display: flex;
             gap: 1em;
             width: 80%;
             margin: 20px auto;
-            justify-content: space-evenly;
+            justify-content: space-around;
             align-items: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         
-        .Doctors img {
+        .Doctors img,
+        .Docs img {
             max-width: 200px;
         }
         
         .Doctors button {
-            height: 80%;
+            /*height: 80%;*/
+            padding: 3%;
             width: 200px;
             color: white;
             background-color: black;
-            opacity: 0.8;
+            /*opacity: 0.8;*/
+        }
+        
+        .Form {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100%;
+            flex-direction: column;
+            position: relative;
+            gap: 1em;
+            color: white;
         }
         /*        
-        .Doctors .txt {
-            text-align: center;
+        .From ::before,
+        .From ::after {
+            filter: blur(300px);
         }*/
+        
+        .Form input,
+        .Form button {
+            padding: 5px;
+        }
+        
+        .Form button {
+            border-radius: 10px;
+            color: white;
+            background-color: black;
+        }
+        
+        .show {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            /*display: none;*/
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .hide {
+            /*display: flex;*/
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .Docs {
+            display: flex;
+            flex-direction: column;
+            /*gap: 3em;*/
+            /*margin-left: 50px;*/
+            width: 25%;
+            height: auto;
+            float: left;
+            margin: 20px auto;
+            justify-content: space-around;
+            align-items: center;
+            border: black 1px solid;
+            /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+        }
+        
+        a div,
+        a div:active,
+        a div:visited {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #Close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            padding: 5px;
+        }
         
         @keyframes bgcolorchange {
             0% {
